@@ -1,6 +1,8 @@
 # Keypad10
 A simple external keypad based on Arduino Micro Pro / ATMega32u4, emulates HID Keyboard and is intended to use with Open Broadcaster Studio (OBS).
 
+![Photo of the keypad](https://github.com/biasedlogic/Keypad10/blob/main/PXL_20201229_113510824.jpg?raw=true)
+
 # What does it do?
 
 It emulates an external keyboard with keys not found normally on keyboards: F13-F22. The idea was to bind OBS macros/hotkeys to keys that cannot possibly be used by any real - even if totally obscure - software running on the PC. So this keypad does not need any special driver, it emulates HID Keyboard, plug and play, and then you have 10 extra keys that you know won't be already bound to something.
