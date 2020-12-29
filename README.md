@@ -1,7 +1,7 @@
 # Keypad10
 A simple external keypad based on Arduino Micro Pro / ATMega32u4, emulates HID Keyboard and is intended to use with Open Broadcaster Studio (OBS)
 
-##Components
+# Components
 
 For my implementation I used:
 1x Arduino Pro Micro (ATMega 32u4) board
