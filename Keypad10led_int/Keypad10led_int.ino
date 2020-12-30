@@ -39,13 +39,13 @@ const uint8_t led_green = 1;
 // For each key in sequence: 
 //  1 means the key is a toggle, so on first press it will send e.g. F13 and its LED will light up, the following keypress will send CTRL-F13 and extinguish the LED:
 //  0 means it's an ordinary key behaving like a normal function key on the keyboard, i.e. pressing it each time will send a single keypress, if you hold it, your system will start autorepeating.
-const uint8_t toggles[NBUTTONS] = {1, 1, 1, 1, 0, 0, 0, 0, 0, 0};
+const uint8_t toggles[NBUTTONS] = {1, 0, 0, 1, 0, 0, 1, 0, 0, 0};
 
 
 // For momentary keys (where toggles[i] is zero) key groups can be defined. If a key has a non-zero group assigned, its LED will stay on after pressing (the key behaves like a normal keyboard key, it's just the LED that will stay on).
 //  At the same time all LEDs of other keys in the same group will be extinguished. This is useful if you use the keys e.g. to switch scenes in OBS: the last selected scene is the active one, and the LED will tell you which one it was.
 // If a key is assigned group 0 it is in no group at all, its LED will light as long as the key is held down and will go out as soon as you release it.
-const uint8_t groups[NBUTTONS] = {0, 0, 0, 0, 1, 1, 1, 1, 1, 1};
+const uint8_t groups[NBUTTONS] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 
 
 //internal tables to save state of the keypad
@@ -164,7 +164,7 @@ void loop() {
                   if (groups[i]) 
                     { // if the key is in a key group, switch all other group key's LEDs off first
                       for (uint8_t cancel = 0; cancel<NBUTTONS; cancel++)
-                        if (groups[cancel] == groups[i]) led_state[led_map[cancel]] = 0; //kill all other LEDs in the group
+                        if ((groups[cancel] == groups[i]) && (toggles[cancel]==0)) led_state[led_map[cancel]] = 0; //kill all other LEDs in the group, except if they are toggles
                     }                    
                   led_state[led_map[i]] = 1; //then light up the LED of the key that was pressed - this regardless of whether it's in a group or not                  
                   #ifdef DEBUG
