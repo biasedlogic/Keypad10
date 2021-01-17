@@ -37,3 +37,8 @@ STL files for a housing to hold 10 MX switches and an Arduino board as well.
 
 This is using RGB LEDs WS2812B-MINI under the keys. Schematic is in the directory with the code (keypad10rgb), the code is documented with some comments and can be easily modified for a different pinning and/or keycount. 
 I have designed a slightly different housing and a PCB to mount it all, if there's interest I can provide the PCBs.
+
+
+see video:
+
+[![Video demo of the Keypad10rgb](https://img.youtube.com/vi/R8QmJMVu4xg/hqdefault.jpg)](https://www.youtube.com/watch?v=R8QmJMVu4xg)
