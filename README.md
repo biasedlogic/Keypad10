@@ -31,14 +31,18 @@ For my implementation I used:
 Arduino code is provided.
 STL files for a housing to hold 10 MX switches and an Arduino board as well.
 
+You can see how this version works in this video:
+
+[![Video demo of the Keypad10](https://img.youtube.com/vi/96asNtNJCWU/hqdefault.jpg)](https://www.youtube.com/watch?v=96asNtNJCWU)
+
 # Update - RGB version
 
 ![Photo of the RGB version](https://github.com/biasedlogic/Keypad10/blob/main/Keypad10rgb/DSC04994.JPG?raw=true)
 
 This is using RGB LEDs WS2812B-MINI under the keys. Schematic is in the directory with the code (keypad10rgb), the code is documented with some comments and can be easily modified for a different pinning and/or keycount. 
-I have designed a slightly different housing and a PCB to mount it all, if there's interest I can provide the PCBs.
 
+I have designed a slightly different housing and a PCB to mount it all, if there's interest I can provide the PCBs as well as housings at a reasonable price. I don't have the intent to release this version's hardware design to the public, if you need a free turnkey solution - use the "old" version, with single-color LEDs, it's perfectly functional and can be easily built without ordering PCBs. The RGB LEDs require PCB to work.
 
-see video:
+You can see how it all works in the following video:
 
 [![Video demo of the Keypad10rgb](https://img.youtube.com/vi/R8QmJMVu4xg/hqdefault.jpg)](https://www.youtube.com/watch?v=R8QmJMVu4xg)
